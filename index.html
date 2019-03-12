@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PlugAjax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <style>
+        p,
+        h3 {
+            text-align: center;
+            font-size: 16px
+        }
+
+        .a {
+            color: red;
+        }
+
+        .b {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>PlugAjax é um facilitado de escrita ajax em desenvolvimento. Essa é sua versão 1.0.01</h3>
+    <p class="a"></p>
+    <p class="b"></p>
+    <hr>
+    <form class="form-a"><input type="submit" value="submit"></form>
+    <form class="form-b"><input type="submit" value="submit"></form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="plug.ajax.min.js"></script>
+    <script>
+        var call_a = function (m, e) {  
+            $('.a').html(m);
+        }
+        docON("submit", ".form-a", "POST", "testeA.php", "json", call_a);
+
+
+        var call_b = function (m, e) { 
+            $('.b').html(m);
+        }
+        docON("submit", ".form-b", "POST", "testeB.php", "json", call_b);
+    </script>
+</body>
+
+</html>
