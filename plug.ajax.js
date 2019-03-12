@@ -1,3 +1,9 @@
+/**!
+ * ajax - v1.0.04
+ * PlugAjax
+ * https://github.com/kdesignbrasil/plug-ajax 
+ * Leandro Gonçalves dos Anjos
+*/
 var PlugAjax = (function () {
     return function (m, u, d, t, callback) {
         var request = $.ajax({
